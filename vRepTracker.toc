@@ -6,7 +6,7 @@
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 
-externals/events.lua
-externals/print.lua
+externals\events.lua
+externals\print.lua
 
 main.lua
