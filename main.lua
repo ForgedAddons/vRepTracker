@@ -1,8 +1,5 @@
-local event = CreateFrame("Frame")
-event:SetScript("OnEvent", function(self, event, ...) self[event](self, event, ...) end)
-event:RegisterEvent"COMBAT_TEXT_UPDATE"
-
-event.COMBAT_TEXT_UPDATE = function(self, event, ...)
+local addon, ns = ...
+ns.RegisterEvent("COMBAT_TEXT_UPDATE", function(event, ...)
 	local mType, newFaction = ...;
 	if mType ~= "FACTION" then return end
 	local curFaction = GetWatchedFactionInfo()
@@ -13,10 +10,10 @@ event.COMBAT_TEXT_UPDATE = function(self, event, ...)
 			if name == newFaction then
 				if (isHeader and hasRep) or not isHeader then
 					SetWatchedFactionIndex(i)
-					print("Reputation bar set to "..newFaction)
+					ns.Print("Reputation bar set to "..newFaction)
 				end
 				break;
 			end
 		end		
 	end
-end
+end)
