@@ -1,12 +1,12 @@
 ## Interface: 50400
-## Version: 50400.2
+## Version: 50400.3
 ## Title: |cffc7c7cfv|rRepTracker
 ## Notes: Auto rep tracker
-## Author: Drauer | github/ForgedAddons
+## Author: Drauer
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
+## X-GitHub: ForgedAddons/vRepTracker
 
 externals\events.lua
 externals\print.lua
-
 main.lua
